@@ -90,15 +90,6 @@ export const Settings = () => {
           }}
         />
       </CSSTransition>
-      <button
-        className={classes.toggle}
-        type="button"
-        onClick={() => {
-          setSettingsOpen(open => !open);
-        }}
-        title="Toggle editorial toolbox">
-        <SettingsIcon className={classes.toggleImage} />
-      </button>
     </>
   );
 };

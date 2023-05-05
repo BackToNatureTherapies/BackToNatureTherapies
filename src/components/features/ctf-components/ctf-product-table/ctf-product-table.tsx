@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingBottom: theme.spacing(4),
     '& p': {
       fontWeight: 400,
-      color: '#414D63',
+      color: '#02363a',
       fontSize: '1.8rem',
       lineHeight: 1.55,
     },
@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.up('md')]: {
       paddingBottom: theme.spacing(5),
     },
-    color: '#414D63',
+    color: '#02363a',
   },
   featureInner: {
     overflow: 'hidden',
@@ -124,12 +124,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   priceAddition: {
     fontSize: '1.8rem',
     fontWeight: 400,
-    color: '#414D63',
+    color: '#02363a',
   },
   priceUpper: {
     fontSize: '1.8rem',
     fontWeight: 400,
-    color: '#414D63',
+    color: '#02363a',
     '& $priceAddition': {
       fontSize: '1.8rem',
       fontWeight: 400,

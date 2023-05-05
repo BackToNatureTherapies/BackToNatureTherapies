@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '& p': {
       marginBottom: theme.spacing(6),
       fontSize: '1.8rem',
-      color: '#414D63',
+      color: '#02363a',
     },
     '& h1, h2, h3, h4, h5, h6': {
       marginBottom: theme.spacing(7),
@@ -144,7 +144,16 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: theme.spacing(18, 10, 15, 10),
     },
     '& a': {
-      color: 'inherit',
+      cursor: 'pointer',
+      borderBottom: '1px solid transparent',
+      color: '#953900',
+      minWidth: 0,
+      transition: 'border-bottom-color 0.2s ease-in-out',
+      textDecoration: 'none',
+
+      '&:hover, &:focus, &:focus-within': {
+        borderBottomColor: '#953900',
+      },
     },
     '& hr': {
       border: 0,

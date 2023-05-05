@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 
 import { CtfNavigationGql } from '@src/components/features/ctf-components/ctf-navigation/ctf-navigation-gql';
 import { Link } from '@src/components/shared/link';
-import Logo from '@src/icons/colorful-coin-logo.svg';
+import Logo from '@src/icons/logo-full.svg';
 import { HEADER_HEIGHT, HEADER_HEIGHT_MD, CONTAINER_WIDTH } from '@src/theme';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   corporateLogo: {
     display: 'block',
     height: 'auto',
-    width: '113px',
+    width: '240px',
   },
 }));
 
@@ -86,7 +86,9 @@ export const Header = (props: HeaderPropsInterface) => {
             maxWidth: `${CONTAINER_WIDTH / 10}rem`,
           }}>
           <Link href="/" withoutMaterial title={t('common.homepage')}>
-            <Logo className={classes.corporateLogo} />
+            <div className={classes.corporateLogo}>
+              <Logo />
+            </div>
           </Link>
           <Box display={{ xs: 'none', md: 'block' }}>
             <div className={classes.menuWrapper}>

@@ -64,14 +64,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     order: 0,
-    boxShadow: `0px 0px 0px 1px rgba(25, 37, 50, 0.1),
-    0px -6px 16px -6px rgba(25, 37, 50, 0.03),
-    0px 8px 16px -8px rgba(25, 37, 50, 0.2),
-    0px 13px 27px -5px rgba(25, 37, 50, 0.15)`,
-    borderRadius: '16px',
     [theme.breakpoints.up('md')]: {
       order: 'initial',
     },
+  },
+  imageBorder: {
+    borderRadius: '16px',
+    boxShadow: `0px 0px 0px 1px rgba(25, 37, 50, 0.1),
+                    0px -6px 16px -6px rgba(25, 37, 50, 0.03),
+                    0px 8px 16px -8px rgba(25, 37, 50, 0.2),
+                    0px 13px 27px -5px rgba(25, 37, 50, 0.15)`
   },
   image: {
     display: 'block',
@@ -135,7 +137,7 @@ const DuplexImage = (props: DuplexFieldsFragment) => {
   return (
     <div className={classes.imageContainer}>
       {image?.url ? (
-        <div className={classes.nextImageContainer}>
+        <div className={clsx([classes.nextImageContainer, classes.imageBorder])}>
           <CtfImage
             className={clsx([classes.image, imageStyle === 'fixed' && classes.imageFull])}
             src={`${image.url}?w=600`}
