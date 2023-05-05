@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     lineHeight: 1.56,
     marginTop: theme.spacing(6),
     fontSize: '1.8rem',
-    color: '#414D63',
+    color: '#02363a',
   },
 
   text: {

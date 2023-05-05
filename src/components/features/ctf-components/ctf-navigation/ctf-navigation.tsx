@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     lineHeight: 1.9,
     marginRight: theme.spacing(8),
     position: 'relative',
+    color: '#953900',
 
     [theme.breakpoints.up('lg')]: {
       marginRight: theme.spacing(10),
@@ -33,6 +34,8 @@ const useStyles = makeStyles((theme: Theme) => ({
       cursor: 'pointer',
       display: 'inline-block',
       transition: 'transform 0.2s ease-in-out',
+      whiteSpace: 'nowrap',
+      padding: '1rem 0',
     },
 
     '&:hover, &:focus, &:focus-within': {

@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontSize: '2.8rem',
         fontWeight: 300,
         lineHeight: 1.314,
-        color: '#414D63',
+        color: '#02363a',
       },
     },
 

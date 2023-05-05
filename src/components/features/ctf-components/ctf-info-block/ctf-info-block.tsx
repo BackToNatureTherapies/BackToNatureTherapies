@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       color: '#6f6f6f',
       fontSize: '1.8rem',
       lineHeight: 1.52,
-    },
+    }
   },
 }));
 

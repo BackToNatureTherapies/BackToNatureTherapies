@@ -12,14 +12,13 @@ import {
   getLinkDisplayText,
   getLinkHrefPrefix,
 } from '@src/components/features/ctf-components/ctf-navigation/utils';
-import { LanguageSelector } from '@src/components/features/language-selector';
 import { Link } from '@src/components/shared/link';
-import Logo from '@src/icons/logo-tagline.svg';
+import Logo from '@src/icons/logo-full-white.svg';
 import { CONTAINER_WIDTH } from '@src/theme';
 
 const useStyles = makeStyles((theme: Theme) => ({
   footerContainer: {
-    backgroundColor: '#F4F4F4',
+    backgroundColor: '#E6ECDC',
   },
   footer: {
     display: 'flex',
@@ -46,7 +45,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     listStyle: 'none',
     margin: theme.spacing(0, 0, 8),
     padding: 0,
-    width: '17.2rem',
     [theme.breakpoints.up('md')]: {
       marginBottom: 0,
     },
@@ -72,7 +70,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   submenuItem: {
     '& a': {
       borderBottom: '1px solid transparent',
-      color: '#414D63',
+      color: '#02363a',
       display: 'inline-block',
       minWidth: 0,
       transition: 'border-bottom-color 0.2s ease-in-out',
@@ -80,7 +78,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
     '&:hover, &:focus, &:focus-within': {
       '& > a': {
-        borderBottomColor: '#7C7C7C',
+        borderBottomColor: '#953900',
       },
     },
   },
@@ -88,7 +86,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: 'auto',
   },
   footerCorporateContainer: {
-    backgroundColor: '#212121',
+    backgroundColor: '#01585e',
     color: '#fff',
     paddingBottom: theme.spacing(14),
     paddingTop: theme.spacing(8),
@@ -139,9 +137,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   copyright: {
-    fontSize: '1.8rem',
+    fontSize: '1.2rem',
     lineHeight: 1.2,
     margin: theme.spacing(1, 10, 0, 0),
+    textAlign: 'center',
   },
   legalMenuWrapper: {},
   legalMenu: {
@@ -265,9 +264,6 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
               ))}
             </nav>
           )}
-          <section className={classes.footerEndSection}>
-            <LanguageSelector />
-          </section>
         </footer>
       </Container>
       <Container maxWidth={false} className={classes.footerCorporateContainer}>
@@ -275,12 +271,13 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
           <div className={classes.corporateLogoMenu}>
             <div className={classes.corporateLogoContainer}>
               <Logo className={classes.corporateLogo} />
+              <p className={classes.copyright}>
+                {t('legal.copyright', {year: new Date().getFullYear()})}
+              </p>
             </div>
 
             <section className={classes.copyrightAndLegal}>
-              <p className={classes.copyright}>
-                {t('legal.copyright', { year: new Date().getFullYear() })}
-              </p>
+
               {footerContent?.legalLinks?.featuredPagesCollection?.items?.length && (
                 <nav role="navigation" className={classes.legalMenuWrapper}>
                   <ul className={classes.legalMenu}>

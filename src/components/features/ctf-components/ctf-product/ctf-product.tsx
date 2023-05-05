@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   featureName: {
     marginBottom: theme.spacing(4),
     marginTop: 0,
-    color: '#414D63',
+    color: '#02363a',
     [theme.breakpoints.up('md')]: {
       flexGrow: 1,
       flexShrink: 0,
@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '& .MuiTypography-body1': {
       fontSize: '1.8rem',
       fontWeight: 400,
-      color: '#414D63',
+      color: '#02363a',
     },
     '& > div:last-child': {
       marginBottom: theme.spacing(10),
